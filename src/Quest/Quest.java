@@ -11,9 +11,6 @@ public class Quest {
     public Quest(String name, String description) {
     }
 
-    public void checkCompletion(Player player) {
-    }
-
     public boolean isCompleted() {
         return completed;
     }
