@@ -10,7 +10,7 @@ public class GameWorld {
 
     public GameWorld(GameData data, String startLocationId) {
         this.locations = data.locations;
-        this.currentLocation = data.findLocation(startLocationId);
+        this.currentLocation = findLocation(startLocationId);
     }
 
     public Location getCurrentLocation() {
@@ -21,14 +21,22 @@ public class GameWorld {
         this.currentLocation = location;
     }
 
+    /**
+     * Finds a specific location by its identifier.
+     * @param id the identifier of the location to be found
+     * @return the matching location
+     */
     public Location findLocation(String id) {
         for (Location l : locations) {
-            if (l.getId().equals(id)) {
+            if (l.getId().equals(id)){
                 return l;
             }
         }
         throw new IllegalArgumentException("Location not found: " + id);
     }
+
+
+
 }
 
 

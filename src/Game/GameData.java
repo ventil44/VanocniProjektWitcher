@@ -49,19 +49,9 @@ public class GameData {
 
     }
 
-    /**
-     * Finds a specific location by its identifier.
-     * @param id the identifier of the location to be found
-     * @return the matching location
-     */
-    public Location findLocation(String id) {
-        for (Location l : locations) {
-            if (l.getId().equals(id)){
-                return l;
-            }
-        }
-        throw new IllegalArgumentException("Neexistuje lokace s id: " + id);
-    }
+
+
+
 
 
 }

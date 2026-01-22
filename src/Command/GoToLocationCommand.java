@@ -1,5 +1,6 @@
 package Command;
 
+import Game.GameData;
 import Game.GameWorld;
 import Locations.Location;
 
@@ -9,6 +10,7 @@ import java.util.Scanner;
 public class GoToLocationCommand implements Command {
 
     private GameWorld gameWorld;
+
     private Scanner scanner;
 
     public GoToLocationCommand(GameWorld gameWorld, Scanner scanner) {
@@ -16,6 +18,13 @@ public class GoToLocationCommand implements Command {
         this.scanner = scanner;
     }
 
+    /**
+     * Executes the command to move the player to a connected location.
+     * Gets current location, if there are no connect, prints a message and exits
+     * Displays a list of location the player can go to, player chooses by numbers
+     * If the input is not a number or isnt within the range, prints a message and exits
+     * If the input is valid, player moves the location they chose, prints its name and description
+     */
     @Override
     public void execute() {
         Location current = gameWorld.getCurrentLocation();
@@ -29,12 +38,11 @@ public class GoToLocationCommand implements Command {
         System.out.println("Where do you want to go?");
         for (int i = 0; i < connections.size(); i++) {
             Location loc = gameWorld.findLocation(connections.get(i));
-            System.out.println((i + 1) + ") " + loc.getName());
+            System.out.println((i + 1) + " - " + loc.getName());
         }
 
         System.out.print("> ");
         int choice;
-
         try {
             choice = scanner.nextInt();
         } catch (NumberFormatException e) {
