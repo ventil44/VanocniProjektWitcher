@@ -2,7 +2,6 @@ package Command;
 
 import Game.GameWorld;
 import Locations.Location;
-import Player.Player;
 
 import java.util.List;
 import java.util.Scanner;
@@ -37,7 +36,7 @@ public class GoToLocationCommand implements Command {
         int choice;
 
         try {
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = scanner.nextInt();
         } catch (NumberFormatException e) {
             System.out.println("Invalid input.");
             return;

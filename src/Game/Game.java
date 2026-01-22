@@ -29,7 +29,6 @@ public class Game {
         System.out.println("Game started.");
         System.out.println(gameWorld.getCurrentLocation().getDescription());
 
-        while (!exit) {
             System.out.print("> ");
             String input = scanner.nextLine();
 
@@ -40,7 +39,7 @@ public class Game {
             } else {
                 System.out.println("Unknown command.");
             }
-        }
+
     }
 
     public void stop() {
