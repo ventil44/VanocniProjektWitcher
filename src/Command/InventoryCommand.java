@@ -5,5 +5,5 @@ import Player.Player;
 public class InventoryCommand implements Command {
 
     @Override
-    public void execute(Player player) {}
+    public void execute() {}
 }

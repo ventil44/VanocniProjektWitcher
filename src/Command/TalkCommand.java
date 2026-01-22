@@ -11,5 +11,5 @@ public class TalkCommand implements Command {
     }
 
     @Override
-    public void execute(Player player) {}
+    public void execute() {}
 }
