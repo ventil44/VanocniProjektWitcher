@@ -1,6 +1,7 @@
 package Characters;
 
 import Player.Player;
+import Quest.Quest;
 
 public class NPC {
 
@@ -9,6 +10,10 @@ public class NPC {
         public NPC(String name) {}
 
         public void talk(Player player) {}
+
+        public Quest quest(){
+            return null;
+        }
     }
 
 

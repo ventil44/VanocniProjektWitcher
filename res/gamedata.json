@@ -1,0 +1,29 @@
+{
+  "locations": [
+    {
+      "name": "Wolf Ford",
+      "description": "A small village and the starting location of the game. The witcher arrives here to take contracts from villagers and learn about the Shadow Realm and its dangers.",
+      "connectedLocations": ["Forest of Shadows"]
+    },
+    {
+      "name": "Forest of Shadows",
+      "description": "A dark and mysterious forest surrounding Wolf Ford. It is home to weaker monsters and hides many secrets about the spreading evil.",
+      "connectedLocations": ["Wolf Ford", "The Swamp"]
+    },
+    {
+      "name": "The Swamp",
+      "description": "A dangerous and hostile area hidden deep within the Forest of Shadows. A powerful swamp witch lives here and knows the location of the legendary silver sword.",
+      "connectedLocations": ["Forest of Shadows", "Ancient Walls"]
+    },
+    {
+      "name": "Ancient Walls",
+      "description": "Old ruins discovered after exploring the swamp. These crumbling walls hide the legendary silver sword needed to defeat the Lord of Shadows.",
+      "connectedLocations": ["The Swamp", "Black Fortress"]
+    },
+    {
+      "name": "Black Fortress",
+      "description": "The final location of the game. A dark fortress where the Lord of Shadows resides and where the final battle takes place.",
+      "connectedLocations": ["Ancient Walls"]
+    }
+  ]
+}
