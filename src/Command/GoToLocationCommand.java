@@ -57,10 +57,8 @@ public class GoToLocationCommand implements Command {
         Location newLocation = gameWorld.findLocation(connections.get(choice - 1));
         gameWorld.setCurrentLocation(newLocation);
 
-        System.out.println("You moved to: " + newLocation.getName());
-        System.out.println(newLocation.getDescription());
-
-        return "You moved to: " + newLocation.getName() + newLocation.getDescription();
+        System.out.println("You moved to: " + newLocation.getName() + newLocation.getDescription());
+        return "";
 
     }
 }

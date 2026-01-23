@@ -6,8 +6,13 @@ public class StatusCommand implements Command {
 
     private Player p;
 
+    public StatusCommand(Player p) {
+        this.p = p;
+    }
+
     @Override
     public String execute() {
-        return "HP: " + p.getHealth();
+        System.out.println("HP: " + p.getHealth());
+        return "";
     }
 }

@@ -14,7 +14,7 @@ public class Player {
         public Player(String name, int health, int currentHealth) {
                 this.name = name;
                 this.health = health;
-                this.currentHealth = 100;
+                this.currentHealth = currentHealth;
         }
 
         public void heal(int amount) {}
