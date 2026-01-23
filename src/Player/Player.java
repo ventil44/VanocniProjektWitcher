@@ -9,10 +9,12 @@ public class Player {
 
         private String name;
         private int health;
+        private int currentHealth;
 
-        public Player(String name, int health) {
+        public Player(String name, int health, int currentHealth) {
                 this.name = name;
-                this.health = 100;
+                this.health = health;
+                this.currentHealth = 100;
         }
 
         public void heal(int amount) {}
@@ -31,6 +33,14 @@ public class Player {
 
         public int getHealth() {
                 return health;
+        }
+
+        public int getCurrentHealth() {
+                return currentHealth;
+        }
+
+        public void setCurrentHealth(int currentHealth) {
+                this.currentHealth = currentHealth;
         }
 }
 

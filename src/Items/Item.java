@@ -14,5 +14,4 @@ public abstract class Item {
         return "";
     }
 
-    public abstract void use(Player player);
 }

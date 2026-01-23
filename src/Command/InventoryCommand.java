@@ -1,15 +1,8 @@
 package Command;
 
-import Items.Item;
-import Items.Potion;
-import Items.Weapon;
-import Player.Player;
-
-import java.util.ArrayList;
+import Player.Inventory;
 
 public class InventoryCommand implements Command {
-
-
 
 
     @Override

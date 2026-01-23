@@ -15,6 +15,4 @@ public class Weapon extends Item {
         return 0;
     }
 
-    @Override
-    public void use(Player player) {}
 }
