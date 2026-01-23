@@ -11,5 +11,8 @@ public class UseCommand implements Command {
     }
 
     @Override
-    public void execute() {}
+    public String execute(){
+        return "";
+    }
+
 }

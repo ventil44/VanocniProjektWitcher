@@ -5,5 +5,7 @@ import Player.Player;
 public class InventoryCommand implements Command {
 
     @Override
-    public void execute() {}
+    public String execute() {
+        return "";
+    }
 }

@@ -5,7 +5,7 @@ import Player.Player;
 public class ExitCommand implements Command {
 
     @Override
-    public void execute() {
-
+    public String execute() {
+        return "";
     }
 }

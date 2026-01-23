@@ -11,7 +11,8 @@ public class TakeCommand implements Command {
     }
 
     @Override
-    public void execute() {
+    public String execute() {
+        return "";
     }
 }
 
