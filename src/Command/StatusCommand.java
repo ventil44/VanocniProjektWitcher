@@ -8,6 +8,6 @@ public class StatusCommand implements Command {
 
     @Override
     public String execute() {
-        return Integer.toString(p.getHealth());
+        return "HP: " + p.getHealth();
     }
 }
