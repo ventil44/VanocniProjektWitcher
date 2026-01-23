@@ -26,13 +26,13 @@ public class GoToLocationCommand implements Command {
      * If the input is valid, player moves the location they chose, prints its name and description
      */
     @Override
-    public void execute() {
+    public String execute() {
         Location current = gameWorld.getCurrentLocation();
         List<String> connections = current.getConnectedLocations();
 
         if (connections.isEmpty()) {
             System.out.println("There are no locations to go to.");
-            return;
+            return "";
         }
 
         System.out.println("Where do you want to go?");
@@ -47,12 +47,12 @@ public class GoToLocationCommand implements Command {
             choice = scanner.nextInt();
         } catch (NumberFormatException e) {
             System.out.println("Invalid input.");
-            return;
+            return "";
         }
 
         if (choice < 1 || choice > connections.size()) {
             System.out.println("This location does not exist.");
-            return;
+            return "";
         }
 
         Location newLocation = gameWorld.findLocation(connections.get(choice - 1));
@@ -60,6 +60,7 @@ public class GoToLocationCommand implements Command {
 
         System.out.println("You moved to: " + newLocation.getName());
         System.out.println(newLocation.getDescription());
+        return "";
     }
 }
 

@@ -11,5 +11,7 @@ public class TalkCommand implements Command {
     }
 
     @Override
-    public void execute() {}
+    public String execute() {
+        return "";
+    }
 }

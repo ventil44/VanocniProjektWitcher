@@ -13,4 +13,8 @@ public class Potion extends Item {
 
     @Override
     public void use(Player player) {}
+
+    public int getHealAmount() {
+        return healAmount;
+    }
 }

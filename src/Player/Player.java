@@ -9,11 +9,14 @@ public class Player {
 
         private String name;
         private int health;
+        private int maxHealth;
         private Location currentLocation;
         private Weapon equippedWeapon;
 
-        public Player(String name) {
+        public Player(String name, int maxHealth) {
                 this.name = name;
+                this.maxHealth = maxHealth;
+                this.health = 50;
         }
 
         public void moveTo(Location location) {}
@@ -21,7 +24,6 @@ public class Player {
         public int attack(Enemy enemy) {
             return 0;
         }
-        public void heal(int amount) {}
         public String getStatus() {
             return "";
         }
@@ -37,7 +39,20 @@ public class Player {
             return false;
         }
 
+        public String getName() {
+                return name;
+        }
 
-    }
+        public int getHealth() {
+                return health;
+        }
+
+        public void heal(int amount) {
+                health += amount;
+                if (health > maxHealth) {
+                        health = maxHealth;
+                }
+}
+}
 
 

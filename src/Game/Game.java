@@ -3,7 +3,10 @@ package Game;
 import Command.Command;
 import Command.GoToLocationCommand;
 import Command.ExitCommand;
-import Locations.Location;
+import Command.StatusCommand;
+import Command.HealCommand;
+import Items.Potion;
+import Player.Player;
 
 
 import java.util.ArrayList;
@@ -16,16 +19,19 @@ public class Game {
     private HashMap<String, Command> mapa = new HashMap<>();
     private Scanner scanner = new Scanner(System.in);
     private GameWorld gameWorld;
-    private GameData gameData;
+    private Player player;
 
-    public Game(GameWorld gameWorld) {
+    public Game(GameWorld gameWorld, Player player) {
         this.gameWorld = gameWorld;
+        this.player = player;
         inicializace();
     }
 
     private void inicializace() {
         mapa.put("go", new GoToLocationCommand(gameWorld, scanner));
         mapa.put("exit", new ExitCommand());
+        mapa.put("status", new StatusCommand(player));
+        mapa.put("heal", new HealCommand(player, new Potion("Potion", 50)));
     }
 
     /**

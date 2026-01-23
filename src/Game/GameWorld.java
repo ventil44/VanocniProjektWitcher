@@ -2,6 +2,7 @@ package Game;
 
 import Locations.Location;
 import java.util.ArrayList;
+import Player.Player;
 
 public class GameWorld {
 
@@ -11,6 +12,7 @@ public class GameWorld {
     public GameWorld(GameData data, String startLocationId) {
         this.locations = data.locations;
         this.currentLocation = findLocation(startLocationId);
+
     }
 
     public Location getCurrentLocation() {
