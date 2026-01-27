@@ -31,7 +31,9 @@ public class Player {
             return "";
         }
         public void die() {}
-        public void takeItem(Item item) {}
+        public void takeItem(Item item) {
+                inventory.add(item);
+        }
         public void removeItem(Item item) {}
         public void useItem(Item item) {}
         public void equipWeapon(Weapon weapon) {}

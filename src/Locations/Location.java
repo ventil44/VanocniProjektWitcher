@@ -13,6 +13,7 @@ public class Location {
         private String description;
         private String id;
         private ArrayList<String> connectedLocations;
+        private ArrayList<Item> items = new ArrayList<>();
 
         public Location(String name, String description, String id, ArrayList<String> connectedLocations) {
                 this.name = name;
@@ -40,6 +41,18 @@ public class Location {
         public ArrayList<String> getConnectedLocations() {
                 return connectedLocations;
         }
+
+        public void addItem(Item item) {
+                if (items == null) items = new ArrayList<>();
+                items.add(item);
+        }
+
+        public ArrayList<Item> getItems() {
+                if (items == null) items = new ArrayList<>();
+                return items;
+        }
+
+
 }
 
 

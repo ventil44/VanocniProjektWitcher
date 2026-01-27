@@ -11,7 +11,7 @@ public abstract class Item {
     }
 
     public String getName() {
-        return "";
+        return name;
     }
 
     public abstract void use(Player player);
