@@ -16,9 +16,8 @@ public class HealCommand implements Command {
     @Override
     public String execute() {
         player.heal(potion.getHealAmount());
-        System.out.println("Healed for " + potion.getHealAmount() + " HP.");
-        System.out.println("Current HP: " + player.getHealth());
-        return "";
+        return "Healed for " + potion.getHealAmount() + " HP.\n" +
+                "Current HP: " + player.getHealth();
     }
 }
 

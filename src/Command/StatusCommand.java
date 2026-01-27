@@ -12,7 +12,6 @@ public class StatusCommand implements Command {
 
     @Override
     public String execute() {
-        System.out.println("HP: " + player.getHealth());
-        return "";
+        return "HP: " + player.getHealth();
     }
 }

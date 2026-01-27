@@ -45,6 +45,7 @@ public class GoToLocationCommand implements Command {
         int choice;
         try {
             choice = scanner.nextInt();
+            scanner.nextLine();
         } catch (NumberFormatException e) {
             System.out.println("Invalid input.");
             return "";
@@ -58,9 +59,8 @@ public class GoToLocationCommand implements Command {
         Location newLocation = gameWorld.findLocation(connections.get(choice - 1));
         gameWorld.setCurrentLocation(newLocation);
 
-        System.out.println("You moved to: " + newLocation.getName());
-        System.out.println(newLocation.getDescription());
-        return "";
+        return "You moved to: " + newLocation.getName() + "\n" +
+                newLocation.getDescription();
     }
 }
 

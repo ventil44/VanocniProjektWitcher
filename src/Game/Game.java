@@ -29,7 +29,7 @@ public class Game {
 
     private void inicializace() {
         mapa.put("go", new GoToLocationCommand(gameWorld, scanner));
-        mapa.put("exit", new ExitCommand());
+        mapa.put("exit", new ExitCommand(this));
         mapa.put("status", new StatusCommand(player));
         mapa.put("heal", new HealCommand(player, new Potion("Potion", 50)));
     }
@@ -51,18 +51,19 @@ public class Game {
 
             if (command == null) {
                 System.out.println("Unknown command.");
-            } else {
-                command.execute();
+                continue;
             }
+
+            String result = command.execute();
+            if (result != null && !result.isBlank()) {
+                System.out.println(result);
             }
         }
-
-        public void stop () {
-            exit = true;
-        }
-
-
     }
+    public void stop() {
+        exit = true;
+    }
+}
 
 
 
