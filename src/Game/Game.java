@@ -5,6 +5,7 @@ import Command.GoToLocationCommand;
 import Command.ExitCommand;
 import Command.StatusCommand;
 import Command.HealCommand;
+import Command.InventoryCommand;
 import Items.Potion;
 import Player.Player;
 
@@ -31,7 +32,8 @@ public class Game {
         mapa.put("go", new GoToLocationCommand(gameWorld, scanner));
         mapa.put("exit", new ExitCommand(this));
         mapa.put("status", new StatusCommand(player));
-        mapa.put("heal", new HealCommand(player, new Potion("Potion", 50)));
+        mapa.put("heal", new HealCommand(player, new Potion("Potion", 30)));
+        mapa.put("inventory", new InventoryCommand(player));
     }
 
     /**

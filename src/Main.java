@@ -1,6 +1,7 @@
 import Game.GameData;
 import Game.GameWorld;
 import Game.Game;
+import Items.Item;
 import Player.Player;
 
 public class Main {

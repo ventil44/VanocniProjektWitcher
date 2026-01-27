@@ -5,6 +5,8 @@ import Items.Item;
 import Items.Weapon;
 import Locations.Location;
 
+import java.util.ArrayList;
+
 public class Player {
 
         private String name;
@@ -12,6 +14,7 @@ public class Player {
         private int maxHealth;
         private Location currentLocation;
         private Weapon equippedWeapon;
+        private ArrayList<Item> inventory = new ArrayList<>();
 
         public Player(String name, int maxHealth) {
                 this.name = name;
@@ -52,7 +55,11 @@ public class Player {
                 if (health > maxHealth) {
                         health = maxHealth;
                 }
-}
+        }
+
+        public ArrayList<Item> getInventory() {
+                return inventory;
+        }
 }
 
 
