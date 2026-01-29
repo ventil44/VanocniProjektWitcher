@@ -24,5 +24,4 @@ public abstract class Item {
         return id;
     }
 
-    public abstract void use(Player player);
 }
