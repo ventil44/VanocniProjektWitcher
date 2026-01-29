@@ -1,7 +1,6 @@
 import Game.GameData;
 import Game.GameWorld;
 import Game.Game;
-import Items.Item;
 import Items.Potion;
 import Items.Weapon;
 import Locations.Location;
@@ -13,15 +12,19 @@ public class Main {
 
         GameData data = GameData.loadGameDataFromResources("/gamedata.json");
         System.out.println("Locations: " + data.locations.size());
+        System.out.println("Enemies: " + data.enemies.size());
+        System.out.println("NPCs: " + data.npcs.size());
+        System.out.println("Potions: " + data.potions.size());
 
         GameWorld world = new GameWorld(data, "loc_wolf_ford");
         Player player = new Player("Zbinek", 100);
 
-
-        Location start = world.getCurrentLocation();
-        start.addItem(new Potion("Small potion", 20));
-        start.addItem(new Weapon("Steel sword", 15));
-
+        for (Potion p : data.potions) {
+            Location loc = world.findLocation(p.getLocationId());
+            if (loc != null) {
+                loc.addItem(p);
+            }
+        }
 
         Game game = new Game(world, player);
         game.run();

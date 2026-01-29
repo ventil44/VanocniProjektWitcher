@@ -33,7 +33,7 @@ public class Game {
         mapa.put("go", new GoToLocationCommand(gameWorld, scanner));
         mapa.put("exit", new ExitCommand(this));
         mapa.put("status", new StatusCommand(player));
-        mapa.put("heal", new HealCommand(player, new Potion("Potion", 30)));
+        mapa.put("heal", new HealCommand(player));
         mapa.put("inventory", new InventoryCommand(player));
         mapa.put("take", new TakeCommand(player, gameWorld, scanner));
     }

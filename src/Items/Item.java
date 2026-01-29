@@ -4,7 +4,9 @@ import Player.Player;
 
 public abstract class Item {
 
-    protected String name;
+    private String name;
+    private String id;
+    private String locationId;
 
     public Item(String name) {
         this.name = name;
@@ -12,6 +14,14 @@ public abstract class Item {
 
     public String getName() {
         return name;
+    }
+
+    public String getLocationId() {
+        return locationId;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public abstract void use(Player player);

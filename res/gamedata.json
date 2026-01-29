@@ -30,5 +30,54 @@
       "description": "The final location of the game. A dark fortress where the Lord of Shadows resides and where the final battle takes place.",
       "connectedLocations": ["loc_ancient_walls"]
     }
-  ]
+  ], "enemies": [
+  {
+    "id": "lord_stinu",
+    "name": "Lord Stinu",
+    "homeLocationId": "loc_black_fortress",
+    "health": 100,
+    "damage": 10
+  },
+  {
+    "id": "nekker",
+    "name": "Nekker",
+    "homeLocationId": "loc_forest_of_shadows",
+    "health": 30,
+    "damage": 4
+  }
+  ], "npcs": [
+  {
+    "id": "lovec_havel",
+    "name": "Lovec Havel",
+    "homeLocationId": "loc_wolf_ford"
+  },
+  {
+    "id": "baba_mocalnice",
+    "name": "Baba Mocalnice",
+    "homeLocationId": "loc_swamp"
+  },
+  {
+    "id": "bojovnik_skocdopole",
+    "name": "Bojovnik Skocdopole",
+    "homeLocationId": "loc_ancient_walls"
+  }
+], "potions": [
+  {
+    "id": "healing_potion_1",
+    "name": "Healing Potion 1",
+    "healAmount": 100,
+    "locationId": "loc_wolf_ford"
+  },
+  {
+    "id": "healing_potion_1",
+    "name": "Healing Potion 1",
+    "healAmount": 100,
+    "locationId": "loc_wolf_ford"
+  }
+]
 }
+
+
+
+
+

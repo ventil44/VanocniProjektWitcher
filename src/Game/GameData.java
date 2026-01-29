@@ -1,5 +1,8 @@
 package Game;
 
+import Characters.Enemy;
+import Characters.NPC;
+import Items.Potion;
 import Locations.Location;
 import com.google.gson.Gson;
 import com.sun.tools.javac.Main;
@@ -17,6 +20,9 @@ import java.util.ArrayList;
 public class GameData {
 
     public ArrayList<Location> locations;
+    public ArrayList<Enemy> enemies;
+    public ArrayList<NPC> npcs;
+    public ArrayList<Potion> potions;
 
 
     /**

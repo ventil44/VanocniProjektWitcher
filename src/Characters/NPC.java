@@ -6,6 +6,8 @@ import Quest.Quest;
 public class NPC {
 
         private String name;
+        private String id;
+        private String homeLocationId;
 
         public NPC(String name) {}
 
