@@ -22,7 +22,7 @@ public class InventoryCommand implements Command {
             return "Inventory is empty.";
         }
 
-        String result = "Inventory:\n";
+        String result = "Inventory:";
 
         for (int i = 0; i < items.size(); i++) {
             result += (i + 1) + " - " + items.get(i).getName() + "\n";
