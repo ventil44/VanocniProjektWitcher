@@ -8,14 +8,19 @@ public class NPC {
         private String name;
         private String id;
         private String homeLocationId;
+        private String dialog;
 
         public NPC(String name) {}
 
-        public void talk(Player player) {}
+        public String talk() {
+            return "NPC " + name + ": " + dialog;
+        }
 
         public Quest quest(){
             return null;
         }
+
+
     }
 
 

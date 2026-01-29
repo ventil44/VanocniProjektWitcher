@@ -1,17 +1,24 @@
 package Command;
 
-import Player.Player;
+import Characters.NPC;
+import Locations.Location;
+import Game.GameWorld;
+import Locations.Location;
 
 public class TalkCommand implements Command {
 
-    private String npcName;
-
-    public TalkCommand(String npcName) {
-        this.npcName = npcName;
-    }
+    private GameWorld gameWorld;
+    private NPC npc;
 
     @Override
     public String execute() {
-        return "";
+        Location loc = gameWorld.getCurrentLocation();
+        NPC npc = loc.getNPC();
+
+        if (npc == null) {
+            return "There is no one to talk to here.";
+        }
+
+        return npc.talk();
     }
 }

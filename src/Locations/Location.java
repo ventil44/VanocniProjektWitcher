@@ -1,6 +1,7 @@
 package Locations;
 
 import Characters.Enemy;
+import Characters.NPC;
 import Items.Item;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class Location {
         private ArrayList<Item> items = new ArrayList<>();
         private ArrayList<Enemy> enemies = new ArrayList<>();
         private Enemy enemy;
+        private NPC npc;
 
         public Location(String name, String description, String id, ArrayList<String> connectedLocations) {
                 this.name = name;
@@ -59,6 +61,10 @@ public class Location {
 
         public void setEnemy(Enemy enemy) {
                 this.enemy = enemy;
+        }
+
+        public NPC getNPC() {
+                return npc;
         }
 }
 
