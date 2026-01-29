@@ -8,6 +8,7 @@ import Command.HealCommand;
 import Command.InventoryCommand;
 import Command.TakeCommand;
 import Command.AttackCommand;
+import Command.TalkCommand;
 import Player.Player;
 
 
@@ -37,6 +38,7 @@ public class Game {
         mapa.put("inventory", new InventoryCommand(player));
         mapa.put("take", new TakeCommand(player, gameWorld, scanner));
         mapa.put("attack", new AttackCommand(player, gameWorld));
+        mapa.put("talk", new TalkCommand());
     }
 
     /**
