@@ -1,11 +1,10 @@
 package Locations;
 
 import Characters.Enemy;
-import Characters.NPC;
 import Items.Item;
 
 import java.util.ArrayList;
-import java.util.SplittableRandom;
+
 
 public class Location {
 
@@ -14,6 +13,8 @@ public class Location {
         private String id;
         private ArrayList<String> connectedLocations;
         private ArrayList<Item> items = new ArrayList<>();
+        private ArrayList<Enemy> enemies = new ArrayList<>();
+        private Enemy enemy;
 
         public Location(String name, String description, String id, ArrayList<String> connectedLocations) {
                 this.name = name;
@@ -52,7 +53,13 @@ public class Location {
                 return items;
         }
 
+        public Enemy getEnemy() {
+                return enemy;
+        }
 
+        public void setEnemy(Enemy enemy) {
+                this.enemy = enemy;
+        }
 }
 
 

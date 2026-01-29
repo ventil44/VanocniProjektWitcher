@@ -9,9 +9,8 @@ import java.util.Scanner;
 
 public class GoToLocationCommand implements Command {
 
-    private GameWorld gameWorld;
-
-    private Scanner scanner;
+    private final GameWorld gameWorld;
+    private final Scanner scanner;
 
     public GoToLocationCommand(GameWorld gameWorld, Scanner scanner) {
         this.gameWorld = gameWorld;

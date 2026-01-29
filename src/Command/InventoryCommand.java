@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class InventoryCommand implements Command {
 
-    private Player player;
+    private final Player player;
 
 
     public InventoryCommand(Player player) {

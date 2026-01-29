@@ -53,6 +53,8 @@ public class GameData {
             throw new RuntimeException("Chyba při načítání JSON: " + e.getMessage());
         }
 
+
+
     }
 
 

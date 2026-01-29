@@ -4,7 +4,7 @@ import Game.Game;
 
 public class ExitCommand implements Command {
 
-    private Game game;
+    private final Game game;
 
     public ExitCommand(Game game) {
         this.game = game;

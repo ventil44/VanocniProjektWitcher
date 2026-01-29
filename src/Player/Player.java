@@ -22,26 +22,8 @@ public class Player {
                 this.health = 50;
         }
 
-        public void moveTo(Location location) {}
-        public void moveForward() {}
-        public int attack(Enemy enemy) {
-            return 0;
-        }
-        public String getStatus() {
-            return "";
-        }
-        public void die() {}
         public void takeItem(Item item) {
                 inventory.add(item);
-        }
-        public void removeItem(Item item) {}
-        public void useItem(Item item) {}
-        public void equipWeapon(Weapon weapon) {}
-        public int getDamage() {
-            return 0;
-        }
-        public boolean isAlive(){
-            return false;
         }
 
         public String getName() {
@@ -61,6 +43,32 @@ public class Player {
 
         public ArrayList<Item> getInventory() {
                 return inventory;
+        }
+
+        public void takeDamage(int dmg) {
+                health -= dmg;
+                if (health < 0) {
+                        health = 0;
+                }
+        }
+
+        public int getDamage() {
+                if (equippedWeapon != null) {
+                        return equippedWeapon.getDamage();
+                }
+                return 5;
+        }
+
+
+        public int attack(Enemy enemy) {
+                int dmg = getDamage();
+                enemy.takeDamage(dmg);
+                return dmg;
+        }
+
+
+        public boolean isAlive() {
+                return health > 0;
         }
 }
 

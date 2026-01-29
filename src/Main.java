@@ -1,16 +1,18 @@
+import Characters.Enemy;
 import Game.GameData;
 import Game.GameWorld;
 import Game.Game;
 import Items.Potion;
-import Items.Weapon;
 import Locations.Location;
 import Player.Player;
+import Characters.Enemy;
 
 public class Main {
 
     public static void main(String[] args) {
 
         GameData data = GameData.loadGameDataFromResources("/gamedata.json");
+
         System.out.println("Locations: " + data.locations.size());
         System.out.println("Enemies: " + data.enemies.size());
         System.out.println("NPCs: " + data.npcs.size());
@@ -26,7 +28,18 @@ public class Main {
             }
         }
 
+        for (Enemy enemy : data.enemies) {
+            Location loc = world.findLocation(enemy.getHomeLocationId());
+            if (loc != null) {
+                loc.setEnemy(enemy);
+            }
+        }
+
+
+
         Game game = new Game(world, player);
         game.run();
     }
+
+
 }

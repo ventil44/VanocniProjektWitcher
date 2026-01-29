@@ -4,7 +4,7 @@ import Player.Player;
 
 public class StatusCommand implements Command {
 
-    private Player player;
+    private final Player player;
 
     public StatusCommand(Player player) {
         this.player = player;

@@ -7,11 +7,11 @@ import Command.StatusCommand;
 import Command.HealCommand;
 import Command.InventoryCommand;
 import Command.TakeCommand;
-import Items.Potion;
+import Command.AttackCommand;
 import Player.Player;
 
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -36,6 +36,7 @@ public class Game {
         mapa.put("heal", new HealCommand(player));
         mapa.put("inventory", new InventoryCommand(player));
         mapa.put("take", new TakeCommand(player, gameWorld, scanner));
+        mapa.put("attack", new AttackCommand(player, gameWorld));
     }
 
     /**
