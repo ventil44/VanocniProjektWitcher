@@ -16,10 +16,6 @@ public class NPC {
             return "NPC " + name + ": " + dialog;
         }
 
-        public Quest quest(){
-            return null;
-        }
-
 
     }
 

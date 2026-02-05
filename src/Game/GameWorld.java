@@ -1,5 +1,6 @@
 package Game;
 
+import Characters.Enemy;
 import Items.Weapon;
 import Locations.Location;
 import java.util.ArrayList;
@@ -9,11 +10,13 @@ public class GameWorld {
 
     private ArrayList<Location> locations;
     private ArrayList<Weapon> weapons;
+    private ArrayList<Enemy> enemies;
     private Location currentLocation;
 
     public GameWorld(GameData data, String startLocationId) {
         this.locations = data.locations;
         this.weapons = data.weapons;
+        this.enemies = data.enemies;
         this.currentLocation = findLocation(startLocationId);
 
     }
@@ -47,6 +50,14 @@ public class GameWorld {
             }
         }
         throw new IllegalArgumentException("Weapon not found: " + id);
+    }
+
+    public Enemy findEnemy(String enemyId) {
+        for (Enemy e : enemies) {
+            if (e.getId().equals(enemyId)) return e;
+        }
+        return null;
+
     }
 }
 
