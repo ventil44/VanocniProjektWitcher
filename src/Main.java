@@ -22,7 +22,7 @@ public class Main {
 
         GameWorld world = new GameWorld(data, "loc_wolf_ford");
         Player player = new Player("Zbinek", 100);
-
+        //BORDEL V TOMTO MAINU NEKDY UKLIDIM PARDON MOC SE OMLOUVAM OK?
         for (Potion p : data.potions) {
             Location loc = world.findLocation(p.getLocationId());
             if (loc != null) {

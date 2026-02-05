@@ -10,6 +10,7 @@ import Command.TakeCommand;
 import Command.AttackCommand;
 import Command.TalkCommand;
 import Command.QuestCommand;
+import Command.HelpCommand;
 import Player.Player;
 import Quest.Quest;
 
@@ -25,7 +26,7 @@ public class Game {
     private Scanner scanner = new Scanner(System.in);
     private GameWorld gameWorld;
     private Player player;
-    private Quest quest;
+
 
     public Game(GameWorld gameWorld, Player player) {
         this.gameWorld = gameWorld;
@@ -44,6 +45,7 @@ public class Game {
         mapa.put("attack", new AttackCommand(player, gameWorld));
         mapa.put("talk", new TalkCommand(gameWorld, scanner));
         mapa.put("quest", new QuestCommand(gameWorld, scanner, player));
+        mapa.put("help", new HelpCommand());
     }
 
     /**
