@@ -61,14 +61,18 @@ public class Player {
 
 
         public int attack(Enemy enemy) {
-                int dmg = getDamage();
-                enemy.takeDamage(dmg);
-                return dmg;
+                int damage = getDamage();
+                enemy.takeDamage(damage);
+                return damage;
         }
 
 
         public boolean isAlive() {
                 return health > 0;
+        }
+
+        public void equipWeapon(Weapon weapon) {
+                this.equippedWeapon = weapon;
         }
 }
 

@@ -74,7 +74,21 @@
     "healAmount": 100,
     "locationId": "loc_wolf_ford"
   }
-]
+],
+  "weapons": [
+    {
+      "id": "steel_sword_1",
+      "name": "Steel Sword",
+      "damage": 15,
+      "locationId": "loc_wolf_ford"
+    },
+    {
+      "id": "silver_sword_1",
+      "name": "Silver Sword",
+      "damage": 25,
+      "locationId": "loc_ancient_walls"
+    }
+  ]
 }
 
 

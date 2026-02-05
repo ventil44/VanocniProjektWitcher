@@ -3,6 +3,7 @@ package Game;
 import Characters.Enemy;
 import Characters.NPC;
 import Items.Potion;
+import Items.Weapon;
 import Locations.Location;
 import com.google.gson.Gson;
 import com.sun.tools.javac.Main;
@@ -23,6 +24,7 @@ public class GameData {
     public ArrayList<Enemy> enemies;
     public ArrayList<NPC> npcs;
     public ArrayList<Potion> potions;
+    public ArrayList<Weapon> weapons;
 
 
     /**

@@ -3,6 +3,7 @@ import Game.GameData;
 import Game.GameWorld;
 import Game.Game;
 import Items.Potion;
+import Items.Weapon;
 import Locations.Location;
 import Player.Player;
 import Characters.Enemy;
@@ -32,6 +33,13 @@ public class Main {
             Location loc = world.findLocation(enemy.getHomeLocationId());
             if (loc != null) {
                 loc.setEnemy(enemy);
+            }
+        }
+
+        for (Weapon w : data.weapons) {
+            Location loc = world.findLocation(w.getLocationId());
+            if (loc != null) {
+                loc.addItem(w);
             }
         }
 

@@ -11,9 +11,6 @@ public class Potion extends Item {
         this.healAmount = healAmount;
     }
 
-    @Override
-    public void use(Player player) {}
-
     public int getHealAmount() {
         return healAmount;
     }

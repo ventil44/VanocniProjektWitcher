@@ -2,6 +2,7 @@ package Command;
 
 import Game.GameWorld;
 import Items.Item;
+import Items.Weapon;
 import Player.Player;
 
 import java.util.ArrayList;
@@ -50,6 +51,12 @@ public class TakeCommand implements Command {
 
         Item picked = items.remove(choice - 1);
         player.takeItem(picked);
+
+        if (picked instanceof Weapon) {
+            player.equipWeapon((Weapon) picked);
+            return "You took and equipped: " + picked.getName();
+        }
+
         return "You took: " + picked.getName();
     }
 }
