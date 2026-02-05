@@ -66,6 +66,12 @@ public class Location {
         public NPC getNPC() {
                 return npc;
         }
+
+        public ArrayList<Enemy> getEnemies() {
+                return enemies;
+        }
+
+
 }
 
 

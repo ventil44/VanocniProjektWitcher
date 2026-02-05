@@ -22,7 +22,6 @@ public class Main {
 
         GameWorld world = new GameWorld(data, "loc_wolf_ford");
         Player player = new Player("Zbinek", 100);
-        Quest quest = new Quest();
 
         for (Potion p : data.potions) {
             Location loc = world.findLocation(p.getLocationId());

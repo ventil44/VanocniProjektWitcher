@@ -29,6 +29,7 @@ public class GameWorld {
         this.currentLocation = location;
     }
 
+
     /**
      * Finds a specific location by its identifier.
      * @param id the identifier of the location to be found
@@ -59,6 +60,8 @@ public class GameWorld {
         return null;
 
     }
+
+
 }
 
 

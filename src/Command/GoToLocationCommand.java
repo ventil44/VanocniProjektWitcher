@@ -1,5 +1,6 @@
 package Command;
 
+import Characters.Enemy;
 import Game.GameWorld;
 import Locations.Location;
 
@@ -27,6 +28,15 @@ public class GoToLocationCommand implements Command {
     public String execute() {
         Location current = gameWorld.getCurrentLocation();
         ArrayList<String> connections = current.getConnectedLocations();
+
+        if (current.getId().equals("loc_forest_of_shadows")) {
+
+            Enemy nekker = gameWorld.findEnemy("nekker");
+
+            if (nekker != null && nekker.isAlive()) {
+                return "You have to defeat the Nekker first!";
+            }
+        }
 
         if (connections.isEmpty()) {
             System.out.println("There are no locations to go to.");

@@ -32,6 +32,7 @@ public class AttackCommand implements Command {
 
             if (!enemy.isAlive()) {
                 return result + " Enemy defeated!";
+
             }
 
             player.takeDamage(enemy.getDamage());

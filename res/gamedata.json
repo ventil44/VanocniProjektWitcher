@@ -3,25 +3,25 @@
     {
       "id": "loc_wolf_ford",
       "name": "Wolf Ford",
-      "description": "A small village and the starting location of the game. The witcher arrives here to take contracts from villagers and learn about the Shadow Realm and its dangers.",
+      "description": "A small village and the starting location of the game. The witcher arrives here to take contracts from villagers and learn about the Shadow Realm and its dangers. THERES IS QUEST HERE.",
       "connectedLocations": ["loc_forest_of_shadows"]
     },
     {
       "id": "loc_forest_of_shadows",
       "name": "Forest of Shadows",
-      "description": "A dark and mysterious forest surrounding Wolf Ford. It is home to weaker monsters and hides many secrets about the spreading evil.",
+      "description": "A dark and mysterious forest surrounding Wolf Ford. It is home to weaker monsters and hides many secrets about the spreading evil. THERES IS A NEKKER U GOTTA DEFEAT.",
       "connectedLocations": ["loc_wolf_ford", "loc_swamp"]
     },
     {
       "id": "loc_swamp",
       "name": "The Swamp",
-      "description": "A dangerous and hostile area hidden deep within the Forest of Shadows. A powerful swamp witch lives here and knows the location of the legendary silver sword.",
+      "description": "A dangerous and hostile area hidden deep within the Forest of Shadows. A powerful swamp witch lives here and knows the location of the legendary silver sword. TALK TO THE JEZIBABA",
       "connectedLocations": ["loc_forest_of_shadows", "loc_ancient_walls"]
     },
     {
       "id": "loc_ancient_walls",
       "name": "Ancient Walls",
-      "description": "Old ruins discovered after exploring the swamp. These crumbling walls hide the legendary silver sword needed to defeat the Lord of Shadows.",
+      "description": "Old ruins discovered after exploring the swamp. These crumbling walls hide the legendary silver sword needed to defeat the Lord of Shadows. YOU CAN TALK W SOMEONE HERE.",
       "connectedLocations": ["loc_swamp", "loc_black_fortress"]
     },
     {
