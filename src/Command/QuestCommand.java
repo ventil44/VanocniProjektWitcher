@@ -28,7 +28,7 @@ public class QuestCommand implements Command {
             if (gameWorld.findLocation("loc_wolf_ford") != loc) {
                 return "No quest in this location.";
             } else {
-                System.out.println("Hey witcher i need your help with my math homework. Solve this problem and i will give u my best sword");
+                System.out.println("Hey witcher i need your help with my math homework. Solve this problem and i will give u my best sword.");
                 System.out.println("2x+4=10. Whats ur answer?");
                 System.out.print("> ");
                 int answer;

@@ -39,11 +39,16 @@ public class Main {
         }
 
         for (Weapon w : data.weapons) {
-            Location loc = world.findLocation(w.getLocationId());
-            if (loc != null) {
-                loc.addItem(w);
+            String locId = w.getLocationId();
+            if (locId == null) {
+                continue;
             }
+            Location loc = world.findLocation(locId);
+            loc.addItem(w);
         }
+
+
+
 
 
 

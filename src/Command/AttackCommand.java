@@ -24,27 +24,28 @@ public class AttackCommand implements Command {
         if (enemy == null || !enemy.isAlive()) {
             return "There is no enemy to attack here.";
         }
+        while(enemy.isAlive()) {
+            int dealt = player.attack(enemy);
 
-        int dealt = player.attack(enemy);
+            String result = "You hit " + enemy.getName() +
+                    " for " + dealt + " damage, he now has " + enemy.getHealth() + "HP";
 
-        String result = "You hit " + enemy.getName() +
-                " for " + dealt + " damage, he now has " + enemy.getHealth() +"HP";
+            if (!enemy.isAlive()) {
+                return result + " Enemy defeated!";
+            }
 
-        if (!enemy.isAlive()) {
-            return result + " Enemy defeated!";
-        }
+            player.takeDamage(enemy.getDamage());
 
-        player.takeDamage(enemy.getDamage());
-
-        result += " " + enemy.getName() + " hit you for " +
-                enemy.getDamage() + " damage.";
-        result += "Your HP: " + player.getHealth();
+            result += " " + enemy.getName() + " hit you for " +
+                    enemy.getDamage() + " damage.";
+            result += "Your HP: " + player.getHealth();
 
 
-        if (!player.isAlive()) {
-            result += "You died.";
-        }
+            if (!player.isAlive()) {
+                result += "You died.";
+            }
 
-        return result;
+            System.out.println(result);;
+        } return "";
     }
 }

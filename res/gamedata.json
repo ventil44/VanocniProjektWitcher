@@ -79,8 +79,7 @@
     {
       "id": "old_witchers_sword",
       "name": "Old Witchers Sword",
-      "damage": 15,
-      "locationId": "loc_wolf_ford"
+      "damage": 15
     }
   ]
 }

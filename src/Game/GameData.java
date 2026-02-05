@@ -2,6 +2,7 @@ package Game;
 
 import Characters.Enemy;
 import Characters.NPC;
+import Items.Item;
 import Items.Potion;
 import Items.Weapon;
 import Locations.Location;
@@ -25,6 +26,7 @@ public class GameData {
     public ArrayList<NPC> npcs;
     public ArrayList<Potion> potions;
     public ArrayList<Weapon> weapons;
+    public ArrayList<Weapon> rewardWeapons;
 
 
     /**
