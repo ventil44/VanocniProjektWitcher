@@ -3,7 +3,6 @@ package Command;
 import Characters.NPC;
 import Locations.Location;
 import Game.GameWorld;
-import Locations.Location;
 
 public class TalkCommand implements Command {
 

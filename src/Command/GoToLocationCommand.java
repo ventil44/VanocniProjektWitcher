@@ -1,10 +1,9 @@
 package Command;
 
-import Game.GameData;
 import Game.GameWorld;
 import Locations.Location;
 
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoToLocationCommand implements Command {
@@ -27,7 +26,7 @@ public class GoToLocationCommand implements Command {
     @Override
     public String execute() {
         Location current = gameWorld.getCurrentLocation();
-        List<String> connections = current.getConnectedLocations();
+        ArrayList<String> connections = current.getConnectedLocations();
 
         if (connections.isEmpty()) {
             System.out.println("There are no locations to go to.");

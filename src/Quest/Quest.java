@@ -1,17 +1,17 @@
 package Quest;
 
-import Player.Player;
 
 public class Quest {
 
-    private String name;
-    private String description;
-    private boolean completed;
 
-    public Quest(String name, String description) {
-    }
+    private boolean completed = false;
 
-    public boolean isCompleted() {
+    public boolean notCompleted() {
         return completed;
     }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
 }

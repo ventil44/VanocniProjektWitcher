@@ -9,7 +9,9 @@ import Command.InventoryCommand;
 import Command.TakeCommand;
 import Command.AttackCommand;
 import Command.TalkCommand;
+import Command.QuestCommand;
 import Player.Player;
+import Quest.Quest;
 
 
 
@@ -23,10 +25,12 @@ public class Game {
     private Scanner scanner = new Scanner(System.in);
     private GameWorld gameWorld;
     private Player player;
+    private Quest quest;
 
     public Game(GameWorld gameWorld, Player player) {
         this.gameWorld = gameWorld;
         this.player = player;
+
         inicializace();
     }
 
@@ -39,6 +43,7 @@ public class Game {
         mapa.put("take", new TakeCommand(player, gameWorld, scanner));
         mapa.put("attack", new AttackCommand(player, gameWorld));
         mapa.put("talk", new TalkCommand());
+        mapa.put("quest", new QuestCommand(gameWorld, scanner, player));
     }
 
     /**
