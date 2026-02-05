@@ -81,32 +81,31 @@
       "name": "Old Witchers Sword",
       "damage": 15
     }
-  ], "dialogs": [
+], "dialogs": [
   {
     "id": "dlg_havel_warning",
     "npcId": "lovec_havel",
     "locationId": "loc_wolf_ford",
-    "lines": "Lovec Havel: Hellow there, be careful in the forest ahead. There are enemies omigod"
+    "lines": "Lovec Havel: Hello there, be careful in the forest ahead. There are enemies."
   },
   {
     "id": "dlg_jezibaba_quiz",
     "npcId": "baba_mocalnice",
     "locationId": "loc_swamp",
-    "linesBefore": "Jezibaba: You want my advice? Answer my question then",
-    "question": "Whats 1+1",
+    "linesBefore": "Jezibaba: You want my advice? Answer my question then.",
+    "question": "What is 1 + 1?",
     "correctAnswer": "2",
-    "successLines": "Jezibaba: You got it right! Go this way the turn left, right and right again. You will find what youre looking for"
-    ,
-    "failLines": "Jezibaba: Wrong u dumbass"
-
+    "successLines": "Jezibaba: You got it right! You may pass.",
+    "failLines": "Jezibaba: Wrong. Come back when you are wiser."
   },
   {
-    "id": "bojovnik_skocdopole_talk",
+    "id": "dlg_bojovnik_hint",
     "npcId": "bojovnik_skocdopole",
     "locationId": "loc_ancient_walls",
-    "lines": "Youre nearly there. Kill him and free us from the bad!"
+    "lines": "Bojovnik: You're close. Defeat the enemy and free us all."
   }
 ]
+
 }
 
 

@@ -42,7 +42,7 @@ public class Game {
         mapa.put("inventory", new InventoryCommand(player));
         mapa.put("take", new TakeCommand(player, gameWorld, scanner));
         mapa.put("attack", new AttackCommand(player, gameWorld));
-        mapa.put("talk", new TalkCommand());
+        mapa.put("talk", new TalkCommand(gameWorld, scanner));
         mapa.put("quest", new QuestCommand(gameWorld, scanner, player));
     }
 

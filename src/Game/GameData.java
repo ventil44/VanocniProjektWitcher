@@ -2,12 +2,12 @@ package Game;
 
 import Characters.Enemy;
 import Characters.NPC;
-import Items.Item;
+import Dialogs.Dialog;
 import Items.Potion;
 import Items.Weapon;
 import Locations.Location;
 import com.google.gson.Gson;
-import com.sun.tools.javac.Main;
+
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -26,7 +26,7 @@ public class GameData {
     public ArrayList<NPC> npcs;
     public ArrayList<Potion> potions;
     public ArrayList<Weapon> weapons;
-    public ArrayList<Weapon> rewardWeapons;
+    public ArrayList<Dialog> dialogs;
 
 
     /**

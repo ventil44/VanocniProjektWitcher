@@ -3,20 +3,26 @@ package Game;
 import Characters.Enemy;
 import Items.Weapon;
 import Locations.Location;
+import Dialogs.Dialog;
+
+
 import java.util.ArrayList;
-import Player.Player;
+
 
 public class GameWorld {
 
     private ArrayList<Location> locations;
     private ArrayList<Weapon> weapons;
     private ArrayList<Enemy> enemies;
+    private ArrayList<Dialog> dialogs;
     private Location currentLocation;
+
 
     public GameWorld(GameData data, String startLocationId) {
         this.locations = data.locations;
         this.weapons = data.weapons;
         this.enemies = data.enemies;
+        this.dialogs = data.dialogs;
         this.currentLocation = findLocation(startLocationId);
 
     }
@@ -59,6 +65,25 @@ public class GameWorld {
         }
         return null;
 
+    }
+
+    public Dialog findDialog(String npcId, String locationId) {
+        if (dialogs == null) return null;
+
+        for (Dialog d : dialogs) {
+            if (d.getNpcId().equals(npcId) && d.getLocationId().equals(locationId)) {
+                return d;
+            }
+        }
+        return null;
+    }
+
+    private boolean talkedToJezibaba = false;
+    public boolean hasTalkedToJezibaba() { return talkedToJezibaba; }
+    public void setTalkedToJezibaba(boolean v) { talkedToJezibaba = v; }
+
+    public ArrayList<Dialog> getDialogs() {
+        return dialogs;
     }
 
 

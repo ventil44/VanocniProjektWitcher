@@ -6,8 +6,8 @@ import Items.Potion;
 import Items.Weapon;
 import Locations.Location;
 import Player.Player;
-import Characters.Enemy;
-import Quest.Quest;
+import Dialogs.Dialog;
+
 
 public class Main {
 
@@ -45,6 +45,8 @@ public class Main {
             Location loc = world.findLocation(locId);
             loc.addItem(w);
         }
+
+
 
 
 

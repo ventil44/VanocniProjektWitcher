@@ -38,6 +38,12 @@ public class GoToLocationCommand implements Command {
             }
         }
 
+        if (current.getId().equals("loc_swamp")) {
+            if (!gameWorld.hasTalkedToJezibaba()) {
+                return "Talk to the Jezibaba first!";
+            }
+        }
+
         if (connections.isEmpty()) {
             System.out.println("There are no locations to go to.");
             return "";
