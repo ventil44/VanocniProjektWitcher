@@ -1,5 +1,6 @@
-package Command;
+package Tests;
 
+import Command.TakeCommand;
 import Game.GameData;
 import Game.GameWorld;
 import Items.Weapon;

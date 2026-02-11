@@ -34,6 +34,10 @@ public class Player {
                 return health;
         }
 
+        public void setHealth(int health) {
+                this.health = health;
+        }
+
         public void heal(int amount) {
                 health += amount;
                 if (health > maxHealth) {
