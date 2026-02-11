@@ -5,6 +5,7 @@ import Game.GameWorld;
 import Locations.Location;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GoToLocationCommand implements Command {
@@ -60,7 +61,7 @@ public class GoToLocationCommand implements Command {
         try {
             choice = scanner.nextInt();
             scanner.nextLine();
-        } catch (NumberFormatException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Invalid input.");
             return "";
         }
