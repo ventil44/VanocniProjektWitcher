@@ -23,9 +23,9 @@ public class TalkCommand implements Command {
 
         Dialog d = null;
 
-        for (Dialog candidate : gameWorld.getDialogs()) {
-            if (candidate.getLocationId().equals(loc.getId())) {
-                d = candidate;
+        for (Dialog c : gameWorld.getDialogs()) {
+            if (c.getLocationId().equals(loc.getId())) {
+                d = c;
                 break;
             }
         }

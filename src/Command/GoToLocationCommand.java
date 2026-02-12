@@ -46,8 +46,7 @@ public class GoToLocationCommand implements Command {
         }
 
         if (connections.isEmpty()) {
-            System.out.println("There are no locations to go to.");
-            return "";
+            return "There are no locations to go to.";
         }
 
         System.out.println("Where do you want to go?");
@@ -62,13 +61,11 @@ public class GoToLocationCommand implements Command {
             choice = scanner.nextInt();
             scanner.nextLine();
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input.");
-            return "";
+            return "Invalid inpt";
         }
 
         if (choice < 1 || choice > connections.size()) {
-            System.out.println("This location does not exist.");
-            return "";
+            return "This location does not exist.";
         }
 
         Location newLocation = gameWorld.findLocation(connections.get(choice - 1));

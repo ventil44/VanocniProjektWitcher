@@ -67,20 +67,15 @@ public class GameWorld {
 
     }
 
-    public Dialog findDialog(String npcId, String locationId) {
-        if (dialogs == null) return null;
+    private boolean talkedToJezibaba = false;
 
-        for (Dialog d : dialogs) {
-            if (d.getNpcId().equals(npcId) && d.getLocationId().equals(locationId)) {
-                return d;
-            }
-        }
-        return null;
+    public boolean hasTalkedToJezibaba() {
+        return talkedToJezibaba;
     }
 
-    private boolean talkedToJezibaba = false;
-    public boolean hasTalkedToJezibaba() { return talkedToJezibaba; }
-    public void setTalkedToJezibaba(boolean v) { talkedToJezibaba = v; }
+    public void setTalkedToJezibaba(boolean v) {
+        talkedToJezibaba = v;
+    }
 
     public ArrayList<Dialog> getDialogs() {
         return dialogs;

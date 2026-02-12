@@ -46,7 +46,7 @@ public class AttackCommand implements Command {
                 result += "You died.";
             }
 
-            System.out.println(result);;
+            System.out.println(result);
         } return "";
     }
 }
