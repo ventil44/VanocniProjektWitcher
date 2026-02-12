@@ -1,7 +1,11 @@
 package Items;
 
-import Player.Player;
 
+/**
+ * Abstract class representing items
+ * Abstract because z toho dedi potion a weapon
+ * @author Denis Vesely
+ */
 public abstract class Item {
 
     private String name;
