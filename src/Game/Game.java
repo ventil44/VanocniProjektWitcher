@@ -1,5 +1,6 @@
 package Game;
 
+import Characters.Enemy;
 import Command.Command;
 import Command.GoToLocationCommand;
 import Command.ExitCommand;
@@ -80,6 +81,13 @@ public class Game {
             String result = command.execute();
             if (result != null && !result.isBlank()) {
                 System.out.println(result);
+            }
+
+            Enemy lordStinu = gameWorld.findEnemy("lord_stinu");
+
+            if (!lordStinu.isAlive()) {
+                System.out.println("You killed the cause of bad, you freed the world, yippie yay, the game ends now ok");
+                exit = true;
             }
         }
     }

@@ -7,6 +7,12 @@ import Locations.Location;
 
 import java.util.ArrayList;
 
+/**
+ * Represents users character
+ * The character has a name, health and can equip weapons
+ * The player can attack enemies, receive damage and heal
+ * @author Denis Vesely
+ */
 public class Player {
 
         private String name;
@@ -38,6 +44,11 @@ public class Player {
                 this.health = health;
         }
 
+        /**
+         * Heals the player by a specific amount
+         * Health cant exceed the max health
+         * @param amount amout of HP restored
+         */
         public void heal(int amount) {
                 health += amount;
                 if (health > maxHealth) {
@@ -49,6 +60,11 @@ public class Player {
                 return inventory;
         }
 
+        /**
+         * Reduces the player HP by a specific amount
+         * Health will not drop below 0
+         * @param dmg damage amount
+         */
         public void takeDamage(int dmg) {
                 health -= dmg;
                 if (health < 0) {
@@ -56,6 +72,12 @@ public class Player {
                 }
         }
 
+        /**
+         * Calculated the players damage
+         * Default damage is 5
+         * If a weapon is equipped it returns the weapons damage
+         * @return
+         */
         public int getDamage() {
                 if (equippedWeapon != null) {
                         return equippedWeapon.getDamage();
@@ -63,7 +85,11 @@ public class Player {
                 return 5;
         }
 
-
+        /**
+         * Attacks an enemy and reduces its HP
+         * @param enemy the enemy being attacked
+         * @return the amount of damage dealt
+         */
         public int attack(Enemy enemy) {
                 int damage = getDamage();
                 enemy.takeDamage(damage);
