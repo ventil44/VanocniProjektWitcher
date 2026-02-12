@@ -2,6 +2,10 @@ package Dialogs;
 
 import java.util.ArrayList;
 
+/**
+ * Represents dialogs
+ * @author Denis Vesely
+ */
 public class Dialog {
 
     private String id;
