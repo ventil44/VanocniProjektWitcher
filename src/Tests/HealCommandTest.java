@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests the HealCommand
+ * @author Denis Vesely
+ */
 class HealCommandTest {
 
     Player player;
