@@ -8,6 +8,7 @@ import Items.Potion;
  * Command that allows the user to heal by using a potion from their inventory
  * If a potion is found in users inventory it heals him and removes to potion
  * If a potion isnt found in users inventory it tells him he doesnt have a potion to heal with
+ * @author Denis Vesely
  */
 public class HealCommand implements Command {
 
