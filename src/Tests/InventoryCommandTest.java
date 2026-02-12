@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests the InventoryCommand
+ * @author Denis Vesely
+ */
 class InventoryCommandTest {
 
     Player player;
