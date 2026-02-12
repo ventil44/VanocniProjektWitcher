@@ -2,6 +2,10 @@ package Command;
 
 import Game.Game;
 
+/**
+ * Command for exiting the game
+ * @author Denis Vesely
+ */
 public class ExitCommand implements Command {
 
     private final Game game;
