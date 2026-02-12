@@ -1,5 +1,10 @@
 package Characters;
 
+/**
+ * Represent an enemy character
+ * Enemy has health, name, damage and a home location
+ * @author Denis Vesely
+ */
 public class Enemy {
 
         private String name;
@@ -10,6 +15,11 @@ public class Enemy {
 
         public Enemy(String name, int health, int damage) {}
 
+        /**
+         * Reduces enemy health by a specific amount
+         * Health will not drop below 0
+         * @param damage damage taken
+         */
         public void takeDamage(int damage) {
                 health -= damage;
                 if (health < 0) health = 0;
