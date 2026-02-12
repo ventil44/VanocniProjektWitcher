@@ -9,6 +9,13 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Command that allows the user to take an item from the current location
+ * Command displays all available items in the current location and lets the user take it.
+ * If theres no items it informs the user about it
+ * If a weapon is picked up, it automatically equips it
+ * @author Denis Vesely
+ */
 public class TakeCommand implements Command {
 
     private final Player player;
@@ -21,6 +28,12 @@ public class TakeCommand implements Command {
         this.scanner = scanner;
     }
 
+    /**
+     * Executes take command
+     * The method lists all available items in the current locations, the user can pick one to take
+     * A weapon is automatically equipped
+     * @return a message describing the result of the action
+     */
     @Override
     public String execute() {
         ArrayList<Item> items = gameWorld.getCurrentLocation().getItems();
