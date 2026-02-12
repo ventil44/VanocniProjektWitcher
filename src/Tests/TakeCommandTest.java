@@ -23,6 +23,10 @@ class TakeCommandTest {
     TakeCommand command;
     FakeWorld fakeWorld;
 
+    /**
+     * Tests the TakeCommand
+     * @author Denis Vesely
+     */
     private static class FakeWorld extends GameWorld {
 
         private static final HashMap<String, Location> map = new HashMap<>();
