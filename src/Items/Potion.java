@@ -1,7 +1,9 @@
 package Items;
 
-import Player.Player;
-
+/**
+ * Representing healing potion item
+ * @author Denis Vesely
+ */
 public class Potion extends Item {
 
     private int healAmount;
