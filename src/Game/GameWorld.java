@@ -8,7 +8,11 @@ import Dialogs.Dialog;
 
 import java.util.ArrayList;
 
-
+/**
+ * The entire gameworld
+ * Stores all locations, weapons, enemies and dialogs
+ * @author Denis Vesely
+ */
 public class GameWorld {
 
     private ArrayList<Location> locations;
@@ -50,6 +54,11 @@ public class GameWorld {
         throw new IllegalArgumentException("Location not found: " + id);
     }
 
+    /**
+     * Finds a specific weapon by its identifier.
+     * @param id the identifier of the weapon to be found
+     * @return the matching weapon
+     */
     public Weapon findWeapon(String id) {
         for (Weapon w : weapons) {
             if (w.getId().equals(id)) {
@@ -59,6 +68,11 @@ public class GameWorld {
         throw new IllegalArgumentException("Weapon not found: " + id);
     }
 
+    /**
+     * Finds a specific enemy by its identifier.
+     * @param enemyId the identifier of the enemy to be found
+     * @return the matching enemy
+     */
     public Enemy findEnemy(String enemyId) {
         for (Enemy e : enemies) {
             if (e.getId().equals(enemyId)) return e;
