@@ -1,7 +1,10 @@
 package Items;
 
-import Player.Player;
 
+/**
+ * Representing weapon item
+ * @author Denis Vesely
+ */
 public class Weapon extends Item {
 
     private int damage;
