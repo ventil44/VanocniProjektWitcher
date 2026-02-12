@@ -12,10 +12,6 @@ public class NPC {
 
         public NPC(String name) {}
 
-        public String talk() {
-            return "NPC " + name + ": " + dialog;
-        }
-
 
     }
 
