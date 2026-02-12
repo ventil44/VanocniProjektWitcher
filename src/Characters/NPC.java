@@ -1,8 +1,5 @@
 package Characters;
 
-import Player.Player;
-import Quest.Quest;
-
 public class NPC {
 
         private String name;
@@ -11,8 +8,6 @@ public class NPC {
         private String dialog;
 
         public NPC(String name) {}
-
-
     }
 
 

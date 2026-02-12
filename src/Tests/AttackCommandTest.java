@@ -13,6 +13,10 @@ import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests the AttackCommand
+ * @author Denis Vesely
+ */
 class AttackCommandTest {
 
     Player player;
