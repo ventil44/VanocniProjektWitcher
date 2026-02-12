@@ -6,6 +6,14 @@ import Game.GameWorld;
 
 import java.util.Scanner;
 
+/**
+ * Allows te player to talk with NPCs
+ * Checks if theres anyone to talk to
+ * By the content of the dialog it finds out if its talking to Jezibaba or anuone else
+ * Talking to Jezibaba makes TalkedToJezibab true so the player can move forwartd from the swamps
+ * Other dialogs are just normal dialogs, no biggie if you dont talk with them
+ * @author Denis Vesely
+ */
 public class TalkCommand implements Command {
 
     private final GameWorld gameWorld;
@@ -16,6 +24,13 @@ public class TalkCommand implements Command {
         this.scanner = scanner;
     }
 
+    /**
+     * Executes talk command
+     * searches for dialog in the current location, if none fond it informs the user
+     * If the dialog has a qeustion is triggers the Jezibaba dialog
+     * If its just a normal dialog, it triggers the other dialogs, which you dont have to trigger to progress
+     * @return a dialog text or a message sayign theres no one to talk to
+     */
     @Override
     public String execute() {
         Location loc = gameWorld.getCurrentLocation();
@@ -31,7 +46,7 @@ public class TalkCommand implements Command {
         }
 
         if (d == null) {
-            return "Není tu nikdo, s kým by se dalo mluvit.";
+            return "No one to talk to.";
         }
 
         if (d.getQuestion() != null && d.getCorrectAnswer() != null) {
@@ -56,6 +71,6 @@ public class TalkCommand implements Command {
             return d.getLines();
         }
 
-        return "Tato postava nemá co říct.";
+        return "He got nothing to say";
     }
 }
