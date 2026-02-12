@@ -6,7 +6,11 @@ import Items.Item;
 
 import java.util.ArrayList;
 
-
+/**
+ * Represents a location in the game
+ * A locaiton contains a name, descripton, id, connected locations, items and enemies
+ * @author Denis Vesely
+ */
 public class Location {
 
         private String name;
@@ -28,6 +32,8 @@ public class Location {
         public Location(String name) {
                 this.name = name;
         }
+
+        //all these methods add, get or set certain things, snad nemusim pro kazdou metodu psat "returns name" atd pls
 
         public String getName() {
                 return name;
