@@ -8,6 +8,11 @@ import Game.GameWorld;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Handles a quest a in specific location
+ * Once the quest is completed it cannot be done again
+ * @author Denis Vesely
+ */
 public class QuestCommand implements Command {
 
     private GameWorld gameWorld;
@@ -21,6 +26,13 @@ public class QuestCommand implements Command {
         this.player = player;
     }
 
+    /**
+     * Executes quest command
+     * If the quest is not done, the user has to solve a math problem, if they get it right, they get a sword as a reward
+     * If they get it wrong they can activate the quest ocne again
+     *
+     * @return a message describing the result of the quest attempt
+     */
     @Override
     public String execute(){
         if(!isCompleted) {
