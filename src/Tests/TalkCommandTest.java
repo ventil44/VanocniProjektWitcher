@@ -20,6 +20,10 @@ class TalkCommandTest {
     TalkCommand command;
     FakeWorld fakeWorld;
 
+    /**
+     * Tests the AttackCommand
+     * @author Denis Vesely
+     */
     private static class FakeWorld extends GameWorld {
 
         private static final HashMap<String, Location> map = new HashMap<>();
