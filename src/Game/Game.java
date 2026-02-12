@@ -19,6 +19,11 @@ import Quest.Quest;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Main game controller, initializing all commands and running the main loop of the game
+ * The loop runs until exit is true
+ * @author Denis Vesely
+ */
 public class Game {
 
     private boolean exit = false;
@@ -31,10 +36,12 @@ public class Game {
     public Game(GameWorld gameWorld, Player player) {
         this.gameWorld = gameWorld;
         this.player = player;
-
         inicializace();
     }
 
+    /**
+     * Initializes all the commands into a map
+     */
     private void inicializace() {
         mapa.put("go", new GoToLocationCommand(gameWorld, scanner));
         mapa.put("exit", new ExitCommand(this));
@@ -49,8 +56,10 @@ public class Game {
     }
 
     /**
-     * Starts the game and handles the movement, for now
-     * NOTE: this is where the main code is gonna be
+     * Starts the game and handles the whole game
+     * The method prints a start message and the description of the current location
+     * It repeatedly reads the users inputs until exit is true
+     * If the user inputs an unknown word, it informs the user
      */
     public void run() {
         System.out.println("Game started.");
