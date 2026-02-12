@@ -7,6 +7,7 @@ import Player.Player;
 
 /**
  * Command that handles combat between the player and enemies
+ * Theres a cyklus that goes on and on until either the enemy or the user is defeated
  * @author Denis Vesely
  */
 public class AttackCommand implements Command {

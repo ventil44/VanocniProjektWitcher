@@ -8,6 +8,13 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Command that moves the player fro0m current location to one thats connected
+ *
+ * The command prints out a list of connected locations, the user can choose where to go.
+ * Also in some locations the user has to do some things before hes able to move forward to another location
+ * @author Denis Vesely
+ */
 public class GoToLocationCommand implements Command {
 
     private final GameWorld gameWorld;
@@ -20,10 +27,8 @@ public class GoToLocationCommand implements Command {
 
     /**
      * Executes the command to move the player to a connected location.
-     * Gets current location, if there are no connect, prints a message and exits
-     * Displays a list of location the player can go to, player chooses by numbers
-     * If the input is not a number or isnt within the range, prints a message and exits
-     * If the input is valid, player moves the location they chose, prints its name and description
+     * If the input is invalid it informs the user about it.
+     * @return a message describing the result of the travel
      */
     @Override
     public String execute() {
