@@ -7,6 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests the StatusCommand
+ * @author Denis Vesely
+ */
 class StatusCommandTest {
 
     Player player;
