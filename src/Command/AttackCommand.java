@@ -4,6 +4,7 @@ import Characters.Enemy;
 import Game.GameWorld;
 import Locations.Location;
 import Player.Player;
+import Game.Game;
 
 /**
  * Command that handles combat between the player and enemies
@@ -54,7 +55,7 @@ public class AttackCommand implements Command {
 
 
             if (!player.isAlive()) {
-                result += " You died.";
+                result += " You died. The game ends sorry";
             }
 
             System.out.println(result);

@@ -74,7 +74,7 @@ public class Game {
             Command command = mapa.get(input);
 
             if (command == null) {
-                System.out.println("Unknown command.");
+                System.out.println("Unknown command. Try the command help to see all commands.");
                 continue;
             }
 
