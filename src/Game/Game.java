@@ -62,6 +62,7 @@ public class Game {
      * If the user inputs an unknown word, it informs the user
      */
     public void run() {
+
         System.out.println("Game started.");
         System.out.println(gameWorld.getCurrentLocation().getDescription());
 

@@ -90,6 +90,9 @@ public class GameWorld {
         return dialogs;
     }
 
+    /**
+     * Loads all items into the world from json
+     */
     public void loadWorld() {
         for (Potion p : potions) {
             String locId = p.getLocationId();

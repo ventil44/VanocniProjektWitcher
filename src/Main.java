@@ -1,13 +1,7 @@
-import Characters.Enemy;
 import Game.GameData;
 import Game.GameWorld;
 import Game.Game;
-import Items.Potion;
-import Items.Weapon;
-import Locations.Location;
 import Player.Player;
-import Dialogs.Dialog;
-
 
 public class Main {
 
@@ -21,6 +15,4 @@ public class Main {
         Game game = new Game(world, player);
         game.run();
     }
-
-
 }
