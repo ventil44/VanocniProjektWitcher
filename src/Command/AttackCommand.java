@@ -35,7 +35,7 @@ public class AttackCommand implements Command {
         if (enemy == null || !enemy.isAlive()) {
             return "There is no enemy to attack here.";
         }
-        while(enemy.isAlive()) {
+        while (enemy.isAlive() && player.isAlive()) {
             int dealt = player.attack(enemy);
 
             String result = "You hit " + enemy.getName() +
@@ -54,7 +54,7 @@ public class AttackCommand implements Command {
 
 
             if (!player.isAlive()) {
-                result += "You died.";
+                result += " You died.";
             }
 
             System.out.println(result);

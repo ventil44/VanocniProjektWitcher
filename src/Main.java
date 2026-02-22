@@ -18,13 +18,6 @@ public class Main {
         Player player = new Player("Zbinek", 100);
         world.loadWorld();
 
-
-
-
-
-
-
-
         Game game = new Game(world, player);
         game.run();
     }
