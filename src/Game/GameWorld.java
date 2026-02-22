@@ -1,34 +1,31 @@
 package Game;
 
 import Characters.Enemy;
+import Dialogs.Dialog;
+import Items.Potion;
 import Items.Weapon;
 import Locations.Location;
-import Dialogs.Dialog;
-
 
 import java.util.ArrayList;
 
-/**
- * The entire gameworld
- * Stores all locations, weapons, enemies and dialogs
- * @author Denis Vesely
- */
 public class GameWorld {
 
     private ArrayList<Location> locations;
     private ArrayList<Weapon> weapons;
     private ArrayList<Enemy> enemies;
     private ArrayList<Dialog> dialogs;
-    private Location currentLocation;
+    private ArrayList<Potion> potions;
 
+    private Location currentLocation;
 
     public GameWorld(GameData data, String startLocationId) {
         this.locations = data.locations;
         this.weapons = data.weapons;
         this.enemies = data.enemies;
         this.dialogs = data.dialogs;
-        this.currentLocation = findLocation(startLocationId);
+        this.potions = data.potions;
 
+        this.currentLocation = findLocation(startLocationId);
     }
 
     public Location getCurrentLocation() {
@@ -39,7 +36,6 @@ public class GameWorld {
         this.currentLocation = location;
     }
 
-
     /**
      * Finds a specific location by its identifier.
      * @param id the identifier of the location to be found
@@ -47,7 +43,7 @@ public class GameWorld {
      */
     public Location findLocation(String id) {
         for (Location l : locations) {
-            if (l.getId().equals(id)){
+            if (l.getId().equals(id)) {
                 return l;
             }
         }
@@ -78,7 +74,6 @@ public class GameWorld {
             if (e.getId().equals(enemyId)) return e;
         }
         return null;
-
     }
 
     private boolean talkedToJezibaba = false;
@@ -95,7 +90,29 @@ public class GameWorld {
         return dialogs;
     }
 
+    public void loadWorld() {
+        for (Potion p : potions) {
+            String locId = p.getLocationId();
+            if (locId == null) continue;
 
+            Location loc = findLocation(locId);
+            loc.addItem(p);
+        }
+
+        for (Enemy enemy : enemies) {
+            String locId = enemy.getHomeLocationId();
+            if (locId == null) continue;
+
+            Location loc = findLocation(locId);
+            loc.setEnemy(enemy);
+        }
+
+        for (Weapon w : weapons) {
+            String locId = w.getLocationId();
+            if (locId == null) continue;
+
+            Location loc = findLocation(locId);
+            loc.addItem(w);
+        }
+    }
 }
-
-
